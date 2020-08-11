@@ -44,4 +44,24 @@ var sortArray = function(nums) {
         nums[i]=t;
     }
     return nums
+    
+    
+     //--------QUICK SORT----------------/
+   if (nums.length <= 1) return nums
+
+		let left = [];
+		let right = [];
+		let newArray = [];
+		let pivot = nums.pop();
+		let l = nums.length;
+
+		for (let i = 0; i < l; i++) {
+			if (nums[i] <= pivot) {
+				left.push(nums[i]);
+			} else {
+				right.push(nums[i]);
+			}
+		}
+
+		return newArray.concat(sortArray(left), pivot, sortArray(right));
 };
