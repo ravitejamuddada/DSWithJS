@@ -2,6 +2,7 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
+//BFS
 var levelOrder = function(root) {
     let res=[];
     const lot=(root,l)=>{
